@@ -1,0 +1,53 @@
+var util = require('util');
+
+module.exports = v;
+v.Vec3 = Vec3;
+
+function Vec3(x, y, z) {
+  this.x = x;
+  this.y = y;
+  this.z = z;
+}
+
+function v(x, y, z) {
+  return util.isArray(x) ?
+    new Vec3(x[0], x[1], x[2]) :
+    (typeof x === 'object') ?
+      new Vec3(x.x, x.y, x.z) :
+      new Vec3(x, y, z);
+}
+
+Vec3.prototype.floored = function() {
+  return new Vec3(Math.floor(this.x), Math.floor(this.y), Math.floor(this.z));
+};
+
+Vec3.prototype.offset = function(dx, dy, dz) {
+    return new Vec3(this.x + dx, this.y + dy, this.z + dz);
+};
+Vec3.prototype.plus = function(other) {
+    return this.offset(other.x, other.y, other.z);
+};
+Vec3.prototype.minus = function(other) {
+    return this.offset(-other.x, -other.y, -other.z);
+};
+Vec3.prototype.scaled = function(scalar) {
+    return new Vec3(this.x * scalar, this.y * scalar, this.z * scalar);
+};
+Vec3.prototype.abs = function() {
+    return new Vec3(Math.abs(this.x), Math.abs(this.y), Math.abs(this.z));
+};
+Vec3.prototype.distanceTo = function(other) {
+    var dx = other.x - this.x;
+    var dy = other.y - this.y;
+    var dz = other.z - this.z;
+    return Math.sqrt(dx * dx + dy * dy + dz * dz);
+};
+Vec3.prototype.equals = function(other) {
+    return this.x === other.x && this.y === other.y && this.z === other.z;
+};
+Vec3.prototype.toString = function() {
+    return "(" + this.x + ", " + this.y + ", " + this.z + ")";
+};
+Vec3.prototype.clone = function() {
+    return this.offset(0, 0, 0);
+};
