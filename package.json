@@ -1,0 +1,17 @@
+{
+  "name": "vec3",
+  "version": "0.0.0",
+  "description": "3d vector math",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "keywords": [
+    "point"
+  ],
+  "author": "Andrew Kelley",
+  "license": "BSD",
+  "devDependencies": {
+    "mocha": "~1.7.4"
+  }
+}
