@@ -47,3 +47,5 @@ More available functions are listed below in Test Coverage.
 
   13 tests complete (3 ms)
 ```
+
+More functions welcome in the form of pull requests.
