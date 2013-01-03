@@ -10,11 +10,13 @@ function Vec3(x, y, z) {
 }
 
 function v(x, y, z) {
-  return util.isArray(x) ?
-    new Vec3(x[0], x[1], x[2]) :
-    (typeof x === 'object') ?
-      new Vec3(x.x, x.y, x.z) :
-      new Vec3(x, y, z);
+  return x == null ?
+    new Vec3(0, 0, 0) :
+    util.isArray(x) ?
+      new Vec3(x[0], x[1], x[2]) :
+      (typeof x === 'object') ?
+        new Vec3(x.x, x.y, x.z) :
+        new Vec3(x, y, z);
 }
 
 Vec3.prototype.floored = function() {

@@ -3,6 +3,12 @@ var v = require('../')
   , assert = require('assert')
 
 describe("v()", function() {
+  it("no args", function() {
+    var v1 = v();
+    assert.strictEqual(v1.x, 0);
+    assert.strictEqual(v1.y, 0);
+    assert.strictEqual(v1.z, 0);
+  });
   it("x, y, z", function() {
     var v1 = v(-1, 5, 10.10);
     assert.strictEqual(v1.x, -1);
