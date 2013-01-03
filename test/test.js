@@ -121,4 +121,13 @@ describe("vec3", function() {
     assert.strictEqual(v2.y, 2);
     assert.strictEqual(v2.z, 3);
   });
+  it("add", function() {
+    var v1 = new Vec3(1, 2, 3);
+    var v2 = new Vec3(-1, -2, -3);
+    var v3 = v1.add(v2);
+    assert.strictEqual(v3, v1);
+    assert.strictEqual(v1.x, 0);
+    assert.strictEqual(v1.y, 0);
+    assert.strictEqual(v1.z, 0);
+  });
 });

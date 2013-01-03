@@ -26,6 +26,12 @@ Vec3.prototype.floored = function() {
 Vec3.prototype.offset = function(dx, dy, dz) {
     return new Vec3(this.x + dx, this.y + dy, this.z + dz);
 };
+Vec3.prototype.add = function(other) {
+  this.x += other.x;
+  this.y += other.y;
+  this.z += other.z;
+  return this;
+};
 Vec3.prototype.plus = function(other) {
     return this.offset(other.x, other.y, other.z);
 };
