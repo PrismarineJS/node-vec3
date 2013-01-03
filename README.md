@@ -28,12 +28,14 @@ More available functions are listed below in Test Coverage.
 
 ```
   v()
+    ✓ no args 
     ✓ x, y, z 
     ✓ array 
     ✓ object 
 
   vec3
     ✓ floored 
+    ✓ floor 
     ✓ offset 
     ✓ plus 
     ✓ minus 
@@ -43,9 +45,9 @@ More available functions are listed below in Test Coverage.
     ✓ equals 
     ✓ toString 
     ✓ clone 
+    ✓ add 
 
-
-  13 tests complete (3 ms)
+  16 tests complete (5 ms)
 ```
 
 More functions welcome in the form of pull requests.

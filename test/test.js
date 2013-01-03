@@ -37,6 +37,14 @@ describe("vec3", function() {
     assert.strictEqual(v2.y, -2);
     assert.strictEqual(v2.z, 1);
   });
+  it("floor", function() {
+    var v1 = new Vec3(1.1, -1.5, 1.9);
+    var v2 = v1.floor();
+    assert.strictEqual(v2, v1);
+    assert.strictEqual(v1.x, 1);
+    assert.strictEqual(v1.y, -2);
+    assert.strictEqual(v1.z, 1);
+  });
   it("offset", function() {
     var v1 = new Vec3(1, 2, 3);
     var v2 = v1.offset(10, -10, 20);
