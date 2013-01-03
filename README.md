@@ -46,8 +46,10 @@ More available functions are listed below in Test Coverage.
     ✓ toString 
     ✓ clone 
     ✓ add 
+    ✓ set 
 
-  16 tests complete (5 ms)
+
+  17 tests complete (4 ms)
 ```
 
 More functions welcome in the form of pull requests.

@@ -138,4 +138,11 @@ describe("vec3", function() {
     assert.strictEqual(v1.y, 0);
     assert.strictEqual(v1.z, 0);
   });
+  it("set", function() {
+    var v1 = new Vec3(12, 32, 46);
+    v1.set(0, 10, 100);
+    assert.strictEqual(v1.x, 0);
+    assert.strictEqual(v1.y, 10);
+    assert.strictEqual(v1.z, 100);
+  });
 });

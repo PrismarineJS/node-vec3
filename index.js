@@ -19,6 +19,12 @@ function v(x, y, z) {
         new Vec3(x, y, z);
 }
 
+Vec3.prototype.set = function(x, y, z) {
+  this.x = x;
+  this.y = y;
+  this.z = z;
+};
+
 Vec3.prototype.floored = function() {
   return new Vec3(Math.floor(this.x), Math.floor(this.y), Math.floor(this.z));
 };
