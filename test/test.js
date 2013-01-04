@@ -138,11 +138,34 @@ describe("vec3", function() {
     assert.strictEqual(v1.y, 0);
     assert.strictEqual(v1.z, 0);
   });
+  it("subtract", function() {
+    var v1 = new Vec3(1, 2, 3);
+    var v2 = new Vec3(-1, -2, -3);
+    var v3 = v1.subtract(v2);
+    assert.strictEqual(v3, v1);
+    assert.strictEqual(v1.x, 2);
+    assert.strictEqual(v1.y, 4);
+    assert.strictEqual(v1.z, 6);
+  });
   it("set", function() {
     var v1 = new Vec3(12, 32, 46);
     v1.set(0, 10, 100);
     assert.strictEqual(v1.x, 0);
     assert.strictEqual(v1.y, 10);
     assert.strictEqual(v1.z, 100);
+  });
+  it("modulus", function() {
+    var v1 = new Vec3(12, 32, 46);
+    var v2 = new Vec3(14, 32, 44);
+    var v3 = v1.modulus(v2);
+    assert.strictEqual(v1.x, 12);
+    assert.strictEqual(v1.y, 32);
+    assert.strictEqual(v1.z, 46);
+    assert.strictEqual(v2.x, 14);
+    assert.strictEqual(v2.y, 32);
+    assert.strictEqual(v2.z, 44);
+    assert.strictEqual(v3.x, 12);
+    assert.strictEqual(v3.y, 0);
+    assert.strictEqual(v3.z, 2);
   });
 });

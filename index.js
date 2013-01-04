@@ -45,6 +45,12 @@ Vec3.prototype.add = function(other) {
   this.z += other.z;
   return this;
 };
+Vec3.prototype.subtract = function(other) {
+  this.x -= other.x;
+  this.y -= other.y;
+  this.z -= other.z;
+  return this;
+};
 Vec3.prototype.plus = function(other) {
     return this.offset(other.x, other.y, other.z);
 };
@@ -56,6 +62,9 @@ Vec3.prototype.scaled = function(scalar) {
 };
 Vec3.prototype.abs = function() {
     return new Vec3(Math.abs(this.x), Math.abs(this.y), Math.abs(this.z));
+};
+Vec3.prototype.modulus = function(other) {
+    return new Vec3(this.x % other.x , this.y % other.y, this.z % other.z);
 };
 Vec3.prototype.distanceTo = function(other) {
     var dx = other.x - this.x;
