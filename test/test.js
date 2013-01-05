@@ -168,4 +168,8 @@ describe("vec3", function() {
     assert.strictEqual(v3.y, 0);
     assert.strictEqual(v3.z, 2);
   });
+  it("volume", function() {
+    var v1 = new Vec3(3, 4, 5);
+    assert.strictEqual(v1.volume(), 60);
+  });
 });
