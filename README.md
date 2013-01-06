@@ -37,6 +37,7 @@ More available functions are listed below in Test Coverage.
     ✓ floored 
     ✓ floor 
     ✓ offset 
+    ✓ translate 
     ✓ plus 
     ✓ minus 
     ✓ scaled 
@@ -46,10 +47,13 @@ More available functions are listed below in Test Coverage.
     ✓ toString 
     ✓ clone 
     ✓ add 
+    ✓ subtract 
     ✓ set 
+    ✓ modulus 
+    ✓ volume 
 
 
-  17 tests complete (4 ms)
+  21 tests complete
 ```
 
 More functions welcome in the form of pull requests.

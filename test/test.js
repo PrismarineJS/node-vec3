@@ -53,6 +53,13 @@ describe("vec3", function() {
     assert.strictEqual(v2.y, -8);
     assert.strictEqual(v2.z, 23);
   });
+  it("translate", function() {
+    var v1 = new Vec3(1, 2, 3);
+    v1.translate(10, -10, 20);
+    assert.strictEqual(v1.x, 11);
+    assert.strictEqual(v1.y, -8);
+    assert.strictEqual(v1.z, 23);
+  });
   it("plus", function() {
     var v1 = new Vec3(1, 2, 3);
     var v2 = new Vec3(-1, 0, 1);

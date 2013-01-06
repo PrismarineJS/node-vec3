@@ -37,7 +37,13 @@ Vec3.prototype.floor = function() {
 };
 
 Vec3.prototype.offset = function(dx, dy, dz) {
-    return new Vec3(this.x + dx, this.y + dy, this.z + dz);
+  return new Vec3(this.x + dx, this.y + dy, this.z + dz);
+};
+Vec3.prototype.translate = function(dx, dy, dz) {
+  this.x += dx;
+  this.y += dy;
+  this.z += dz;
+  return this;
 };
 Vec3.prototype.add = function(other) {
   this.x += other.x;
@@ -52,35 +58,35 @@ Vec3.prototype.subtract = function(other) {
   return this;
 };
 Vec3.prototype.plus = function(other) {
-    return this.offset(other.x, other.y, other.z);
+  return this.offset(other.x, other.y, other.z);
 };
 Vec3.prototype.minus = function(other) {
-    return this.offset(-other.x, -other.y, -other.z);
+  return this.offset(-other.x, -other.y, -other.z);
 };
 Vec3.prototype.scaled = function(scalar) {
-    return new Vec3(this.x * scalar, this.y * scalar, this.z * scalar);
+  return new Vec3(this.x * scalar, this.y * scalar, this.z * scalar);
 };
 Vec3.prototype.abs = function() {
-    return new Vec3(Math.abs(this.x), Math.abs(this.y), Math.abs(this.z));
+  return new Vec3(Math.abs(this.x), Math.abs(this.y), Math.abs(this.z));
 };
 Vec3.prototype.volume = function() {
-    return this.x * this.y * this.z;
+  return this.x * this.y * this.z;
 };
 Vec3.prototype.modulus = function(other) {
-    return new Vec3(this.x % other.x , this.y % other.y, this.z % other.z);
+  return new Vec3(this.x % other.x , this.y % other.y, this.z % other.z);
 };
 Vec3.prototype.distanceTo = function(other) {
-    var dx = other.x - this.x;
-    var dy = other.y - this.y;
-    var dz = other.z - this.z;
-    return Math.sqrt(dx * dx + dy * dy + dz * dz);
+  var dx = other.x - this.x;
+  var dy = other.y - this.y;
+  var dz = other.z - this.z;
+  return Math.sqrt(dx * dx + dy * dy + dz * dz);
 };
 Vec3.prototype.equals = function(other) {
-    return this.x === other.x && this.y === other.y && this.z === other.z;
+  return this.x === other.x && this.y === other.y && this.z === other.z;
 };
 Vec3.prototype.toString = function() {
-    return "(" + this.x + ", " + this.y + ", " + this.z + ")";
+  return "(" + this.x + ", " + this.y + ", " + this.z + ")";
 };
 Vec3.prototype.clone = function() {
-    return this.offset(0, 0, 0);
+  return this.offset(0, 0, 0);
 };
