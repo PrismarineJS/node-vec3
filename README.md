@@ -51,6 +51,8 @@ More available functions are listed below in Test Coverage.
     ✓ set 
     ✓ modulus 
     ✓ volume 
+    ✓ min 
+    ✓ max 
 
 
   21 tests complete
