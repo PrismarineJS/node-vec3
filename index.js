@@ -93,6 +93,12 @@ Vec3.prototype.toString = function() {
 Vec3.prototype.clone = function() {
   return this.offset(0, 0, 0);
 };
+Vec3.prototype.min = function(other) {
+  return new Vec3(Math.min(this.x, other.x), Math.min(this.y, other.y), Math.min(this.z, other.z));
+};
+Vec3.prototype.max = function(other) {
+  return new Vec3(Math.max(this.x, other.x), Math.max(this.y, other.y), Math.max(this.z, other.z));
+};
 
 function euclideanMod(numerator, denominator) {
   var result = numerator % denominator;

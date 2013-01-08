@@ -179,4 +179,20 @@ describe("vec3", function() {
     var v1 = new Vec3(3, 4, 5);
     assert.strictEqual(v1.volume(), 60);
   });
+  it("min", function() {
+    var v1 = new Vec3(-1, 0, 1);
+    var v2 = new Vec3(10, -10, 1.1);
+    var v3 = v1.min(v2);
+    assert.strictEqual(v3.x, -1);
+    assert.strictEqual(v3.y, -10);
+    assert.strictEqual(v3.z, 1);
+  });
+  it("max", function() {
+    var v1 = new Vec3(-1, 0, 1);
+    var v2 = new Vec3(10, -10, 1.1);
+    var v3 = v1.max(v2);
+    assert.strictEqual(v3.x, 10);
+    assert.strictEqual(v3.y, 0);
+    assert.strictEqual(v3.z, 1.1);
+  });
 });
