@@ -73,7 +73,10 @@ Vec3.prototype.volume = function() {
   return this.x * this.y * this.z;
 };
 Vec3.prototype.modulus = function(other) {
-  return new Vec3(this.x % other.x , this.y % other.y, this.z % other.z);
+  return new Vec3(
+    euclideanMod(this.x, other.x),
+    euclideanMod(this.y, other.y),
+    euclideanMod(this.z, other.z));
 };
 Vec3.prototype.distanceTo = function(other) {
   var dx = other.x - this.x;
@@ -90,3 +93,8 @@ Vec3.prototype.toString = function() {
 Vec3.prototype.clone = function() {
   return this.offset(0, 0, 0);
 };
+
+function euclideanMod(numerator, denominator) {
+  var result = numerator % denominator;
+  return result < 0 ? result + denominator : result;
+}

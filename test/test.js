@@ -162,18 +162,18 @@ describe("vec3", function() {
     assert.strictEqual(v1.z, 100);
   });
   it("modulus", function() {
-    var v1 = new Vec3(12, 32, 46);
-    var v2 = new Vec3(14, 32, 44);
+    var v1 = new Vec3(12, 32, -1);
+    var v2 = new Vec3(14, 32, 16);
     var v3 = v1.modulus(v2);
     assert.strictEqual(v1.x, 12);
     assert.strictEqual(v1.y, 32);
-    assert.strictEqual(v1.z, 46);
+    assert.strictEqual(v1.z, -1);
     assert.strictEqual(v2.x, 14);
     assert.strictEqual(v2.y, 32);
-    assert.strictEqual(v2.z, 44);
+    assert.strictEqual(v2.z, 16);
     assert.strictEqual(v3.x, 12);
     assert.strictEqual(v3.y, 0);
-    assert.strictEqual(v3.z, 2);
+    assert.strictEqual(v3.z, 15);
   });
   it("volume", function() {
     var v1 = new Vec3(3, 4, 5);
