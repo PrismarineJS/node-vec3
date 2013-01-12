@@ -156,7 +156,8 @@ describe("vec3", function() {
   });
   it("set", function() {
     var v1 = new Vec3(12, 32, 46);
-    v1.set(0, 10, 100);
+    var v2 = v1.set(0, 10, 100);
+    assert.strictEqual(v1, v2);
     assert.strictEqual(v1.x, 0);
     assert.strictEqual(v1.y, 10);
     assert.strictEqual(v1.z, 100);
@@ -194,5 +195,17 @@ describe("vec3", function() {
     assert.strictEqual(v3.x, 10);
     assert.strictEqual(v3.y, 0);
     assert.strictEqual(v3.z, 1.1);
+  });
+  it("update", function() {
+    var v1 = new Vec3(-1, 0, 1);
+    var v2 = new Vec3(10, -10, 1.1);
+    var v3 = v1.update(v2);
+    assert.strictEqual(v3, v1);
+    assert.strictEqual(v1.x, 10);
+    assert.strictEqual(v1.y, -10);
+    assert.strictEqual(v1.z, 1.1);
+    assert.strictEqual(v2.x, 10);
+    assert.strictEqual(v2.y, -10);
+    assert.strictEqual(v2.z, 1.1);
   });
 });

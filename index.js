@@ -23,6 +23,14 @@ Vec3.prototype.set = function(x, y, z) {
   this.x = x;
   this.y = y;
   this.z = z;
+  return this;
+};
+
+Vec3.prototype.update = function(other) {
+  this.x = other.x;
+  this.y = other.y;
+  this.z = other.z;
+  return this;
 };
 
 Vec3.prototype.floored = function() {
