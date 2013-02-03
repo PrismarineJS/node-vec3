@@ -1,7 +1,7 @@
-var util = require('util');
-
 module.exports = v;
 v.Vec3 = Vec3;
+
+var re = /\((-?[.\d]+), (-?[.\d]+), (-?[.\d]+)\)/;
 
 function Vec3(x, y, z) {
   this.x = x;
@@ -10,13 +10,25 @@ function Vec3(x, y, z) {
 }
 
 function v(x, y, z) {
-  return x == null ?
-    new Vec3(0, 0, 0) :
-    util.isArray(x) ?
-      new Vec3(x[0], x[1], x[2]) :
-      (typeof x === 'object') ?
-        new Vec3(x.x, x.y, x.z) :
-        new Vec3(x, y, z);
+  if (x == null) {
+    return new Vec3(0, 0, 0);
+  } else if (Array.isArray(x)) {
+    return new Vec3(parseFloat(x[0], 10), parseFloat(x[1], 10), parseFloat(x[2], 10));
+  } else if (typeof x === 'object') {
+    return new Vec3(parseFloat(x.x, 10), parseFloat(x.y, 10), parseFloat(x.z, 10));
+  } else if (typeof x === 'string' && y == null) {
+    var match = x.match(re);
+    if (match) {
+      return new Vec3(
+          parseFloat(match[1], 10),
+          parseFloat(match[2], 10),
+          parseFloat(match[3], 10));
+    } else {
+      throw new Error("vec3: cannot parse: " + x);
+    }
+  } else {
+    return new Vec3(parseFloat(x, 10), parseFloat(y, 10), parseFloat(z, 10));
+  }
 }
 
 Vec3.prototype.set = function(x, y, z) {

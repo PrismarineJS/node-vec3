@@ -27,6 +27,27 @@ describe("v()", function() {
     assert.strictEqual(v1.y, 8);
     assert.strictEqual(v1.z, 7);
   });
+  it("string coords", function() {
+    var v1 = v("1", "1.5", "-30.2");
+    assert.strictEqual(v1.x, 1);
+    assert.strictEqual(v1.y, 1.5);
+    assert.strictEqual(v1.z, -30.2);
+  });
+  it("deserialize", function() {
+    var v1 = v(v(1, -3.5, 0).toString());
+    assert.strictEqual(v1.x, 1);
+    assert.strictEqual(v1.y, -3.5);
+    assert.strictEqual(v1.z, 0);
+    var v2 = v(v(-111, 222, 9876543210.123456789).toString());
+    assert.strictEqual(v2.x, -111);
+    assert.strictEqual(v2.y, 222);
+    assert.strictEqual(v2.z, 9876543210.123456789);
+  });
+  it("invalid deserialize", function() {
+    assert.throws(function() {
+      return v("lol hax");
+    }, /cannot parse/);
+  });
 });
 describe("vec3", function() {
   it("floored", function() {
