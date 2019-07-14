@@ -125,7 +125,7 @@ Vec3.prototype.norm = function() {
 Vec3.prototype.unit = function() {
   var norm = this.norm();
   if(norm === 0) {
-    return this;
+    return this.clone();
   } else {
     return this.scaled(1 / norm);
   }
