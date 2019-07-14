@@ -119,6 +119,47 @@ Vec3.prototype.min = function(other) {
 Vec3.prototype.max = function(other) {
   return new Vec3(Math.max(this.x, other.x), Math.max(this.y, other.y), Math.max(this.z, other.z));
 };
+Vec3.prototype.norm = function() {
+  return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
+};
+Vec3.prototype.unit = function() {
+  var norm = this.norm();
+  if(norm === 0) {
+    return this;
+  } else {
+    return this.scaled(1 / norm);
+  }
+};
+Vec3.prototype.scale = function(scalar) {
+  this.x *= scalar;
+  this.y *= scalar;
+  this.z *= scalar;
+  return this;
+};
+Vec3.prototype.xyDistanceTo = function(other) {
+  var dx = other.x - this.x;
+  var dy = other.y - this.y;
+  return Math.sqrt(dx * dx + dy * dy);
+};
+Vec3.prototype.xzDistanceTo = function(other) {
+  var dx = other.x - this.x;
+  var dz = other.z - this.z;
+  return Math.sqrt(dx * dx + dz * dz);
+};
+Vec3.prototype.yzDistanceTo = function(other) {
+  var dy = other.y - this.y;
+  var dz = other.z - this.z;
+  return Math.sqrt(dy * dy + dz * dz);
+};
+Vec3.prototype.innerProduct = function(other) {
+  return this.x * other.x + this.y * other.y + this.z * other.z;
+};
+Vec3.prototype.manhattanDistanceTo = function(other) {
+  return Math.abs(other.x - this.x) + Math.abs(other.y - this.y) + Math.abs(other.z - this.z);
+};
+Vec3.prototype.toArray = function() {
+  return [this.x, this.y, this.z];
+};
 
 function euclideanMod(numerator, denominator) {
   var result = numerator % denominator;
