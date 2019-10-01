@@ -229,4 +229,77 @@ describe("vec3", function() {
     assert.strictEqual(v2.y, -10);
     assert.strictEqual(v2.z, 1.1);
   });
+  it("norm", function() {
+    var v1 = new Vec3(-10, 0, 10);
+    assert.strictEqual(Math.round(v1.norm() * 100000), Math.round(14.142135623730950 * 100000));
+  });
+  it("unit", function() {
+    var v1 = new Vec3(10, -10, 1.1);
+    var v2 = v1.unit()
+    assert.strictEqual(Math.round(v2.x * 100000), Math.round(0.7049774402016568 * 100000));
+    assert.strictEqual(Math.round(v2.y * 100000), Math.round(-0.704977440201656 * 100000));
+    assert.strictEqual(Math.round(v2.z * 100000), Math.round(0.07754751842218225 * 100000));
+    var v3 = new Vec3(0, 0, 0);
+    var v4 = v3.unit()
+    assert.strictEqual(v4.x, 0);
+    assert.strictEqual(v4.y, 0);
+    assert.strictEqual(v4.z, 0);
+  });
+  it("scale", function() {
+    var v1 = new Vec3(10, -10, 1.1);
+    var v2 = v1.scale(1.5)
+    assert.strictEqual(v2.x, 15);
+    assert.strictEqual(v2.y, -15);
+    assert.strictEqual(Math.round(v2.z * 100000), Math.round(1.65 * 100000));
+  });
+  it("xyDistanceTo", function() {
+    var v1 = new Vec3(1, 1, 1);
+    var v2 = new Vec3(2, 2, 2);
+    var dist1 = v1.xyDistanceTo(v2);
+    var dist2 = v2.xyDistanceTo(v1);
+    var expected = 1.4142135623730950;
+    assert.strictEqual(dist1, dist2);
+    assert.strictEqual(Math.round(dist1 * 100000), Math.round(expected * 100000));
+  });
+  it("xzDistanceTo", function() {
+    var v1 = new Vec3(1, 1, 1);
+    var v2 = new Vec3(2, 2, 2);
+    var dist1 = v1.xzDistanceTo(v2);
+    var dist2 = v2.xzDistanceTo(v1);
+    var expected = 1.4142135623730950;
+    assert.strictEqual(dist1, dist2);
+    assert.strictEqual(Math.round(dist1 * 100000), Math.round(expected * 100000));
+  });
+  it("yzDistanceTo", function() {
+    var v1 = new Vec3(1, 1, 1);
+    var v2 = new Vec3(2, 2, 2);
+    var dist1 = v1.yzDistanceTo(v2);
+    var dist2 = v2.yzDistanceTo(v1);
+    var expected = 1.4142135623730950;
+    assert.strictEqual(dist1, dist2);
+    assert.strictEqual(Math.round(dist1 * 100000), Math.round(expected * 100000));
+  });
+  it("innerProduct", function() {
+    var v1 = new Vec3(-1, 0, 1);
+    var v2 = new Vec3(0, 1, 0);
+    var ip1 = v1.innerProduct(v2)
+    var ip2 = v2.innerProduct(v1)
+    assert.strictEqual(ip1, ip2);
+    assert.strictEqual(ip1, 0);
+  });
+  it("manhattanDistanceTo", function() {
+    var v1 = new Vec3(-1, 0, 1);
+    var v2 = new Vec3(10, -10, 1.1);
+    var dist1 = v1.manhattanDistanceTo(v2);
+    var dist2 = v2.manhattanDistanceTo(v1);
+    assert.strictEqual(dist1, dist2);
+    assert.strictEqual(dist1, 21.1);
+  });
+  it("toArray", function() {
+    var v1 = new Vec3(1, -1, 3.14);
+    var array = v1.toArray()
+    assert.strictEqual(v1.x, array[0]);
+    assert.strictEqual(v1.y, array[1]);
+    assert.strictEqual(v1.z, array[2]);
+  });
 });

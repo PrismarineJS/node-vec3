@@ -27,35 +27,45 @@ More available functions are listed below in Test Coverage.
 ## Test Coverage
 
 ```
-  v()
-    ✓ no args 
-    ✓ x, y, z 
-    ✓ array 
-    ✓ object 
+v()
+    √ no args 
+    √ x, y, z 
+    √ array 
+    √ object 
 
   vec3
-    ✓ floored 
-    ✓ floor 
-    ✓ offset 
-    ✓ translate 
-    ✓ plus 
-    ✓ minus 
-    ✓ scaled 
-    ✓ abs 
-    ✓ distanceTo 
-    ✓ equals 
-    ✓ toString 
-    ✓ clone 
-    ✓ add 
-    ✓ subtract 
-    ✓ set 
-    ✓ modulus 
-    ✓ volume 
-    ✓ min 
-    ✓ max 
+    √ floored 
+    √ floor 
+    √ offset 
+    √ translate 
+    √ plus 
+    √ minus 
+    √ scaled 
+    √ abs 
+    √ distanceTo 
+    √ equals 
+    √ toString 
+    √ clone 
+    √ add 
+    √ subtract 
+    √ set 
+    √ modulus 
+    √ volume 
+    √ min 
+    √ max 
+    √ update 
+    √ norm 
+    √ unit 
+    √ scale 
+    √ xyDistanceTo 
+    √ xzDistanceTo 
+    √ yzDistanceTo 
+    √ innerProduct 
+    √ manhattanDistanceTo 
+    √ toArray 
 
 
-  21 tests complete
+  36 tests complete
 ```
 
 More functions welcome in the form of pull requests.
