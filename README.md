@@ -28,44 +28,50 @@ More available functions are listed below in Test Coverage.
 
 ```
 v()
-    √ no args 
-    √ x, y, z 
-    √ array 
-    √ object 
+    ✓ no args
+    ✓ x, y, z
+    ✓ array
+    ✓ object
+    ✓ string coords
+    ✓ deserialize
+    ✓ invalid deserialize
 
   vec3
-    √ floored 
-    √ floor 
-    √ offset 
-    √ translate 
-    √ plus 
-    √ minus 
-    √ scaled 
-    √ abs 
-    √ distanceTo 
-    √ equals 
-    √ toString 
-    √ clone 
-    √ add 
-    √ subtract 
-    √ set 
-    √ modulus 
-    √ volume 
-    √ min 
-    √ max 
-    √ update 
-    √ norm 
-    √ unit 
-    √ scale 
-    √ xyDistanceTo 
-    √ xzDistanceTo 
-    √ yzDistanceTo 
-    √ innerProduct 
-    √ manhattanDistanceTo 
-    √ toArray 
+    ✓ floored
+    ✓ floor
+    ✓ offset
+    ✓ translate
+    ✓ plus
+    ✓ minus
+    ✓ scaled
+    ✓ abs
+    ✓ distanceTo
+    ✓ equals
+    ✓ toString
+    ✓ clone
+    ✓ add
+    ✓ subtract
+    ✓ set
+    ✓ modulus
+    ✓ volume
+    ✓ min
+    ✓ max
+    ✓ update
+    ✓ norm
+    ✓ dot
+    ✓ cross
+    ✓ unit
+    ✓ normalize
+    ✓ scale
+    ✓ xyDistanceTo
+    ✓ xzDistanceTo
+    ✓ yzDistanceTo
+    ✓ innerProduct
+    ✓ manhattanDistanceTo
+    ✓ toArray
 
 
-  36 tests complete
+  39 passing
 ```
 
 More functions welcome in the form of pull requests.

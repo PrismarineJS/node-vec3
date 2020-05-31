@@ -45,9 +45,15 @@ declare class Vec3 {
 
     max(other: Vec3): Vec3;
 
+    dot(other: Vec3): number;
+
+    cross(other: Vec3): Vec3;
+
     norm(): number;
 
     unit(): Vec3;
+
+    normalize(): Vec3;
 
     scale(scalar): this;
 
