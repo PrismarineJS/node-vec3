@@ -12,108 +12,108 @@ class Vec3 {
     this.y = y
     this.z = z
     return this
-  };
+  }
 
   update (other) {
     this.x = other.x
     this.y = other.y
     this.z = other.z
     return this
-  };
+  }
 
   floored () {
     return new Vec3(Math.floor(this.x), Math.floor(this.y), Math.floor(this.z))
-  };
+  }
 
   floor () {
     this.x = Math.floor(this.x)
     this.y = Math.floor(this.y)
     this.z = Math.floor(this.z)
     return this
-  };
+  }
 
   offset (dx, dy, dz) {
     return new Vec3(this.x + dx, this.y + dy, this.z + dz)
-  };
+  }
 
   translate (dx, dy, dz) {
     this.x += dx
     this.y += dy
     this.z += dz
     return this
-  };
+  }
 
   add (other) {
     this.x += other.x
     this.y += other.y
     this.z += other.z
     return this
-  };
+  }
 
   subtract (other) {
     this.x -= other.x
     this.y -= other.y
     this.z -= other.z
     return this
-  };
+  }
 
   plus (other) {
     return this.offset(other.x, other.y, other.z)
-  };
+  }
 
   minus (other) {
     return this.offset(-other.x, -other.y, -other.z)
-  };
+  }
 
   scaled (scalar) {
     return new Vec3(this.x * scalar, this.y * scalar, this.z * scalar)
-  };
+  }
 
   abs () {
     return new Vec3(Math.abs(this.x), Math.abs(this.y), Math.abs(this.z))
-  };
+  }
 
   volume () {
     return this.x * this.y * this.z
-  };
+  }
 
   modulus (other) {
     return new Vec3(
       euclideanMod(this.x, other.x),
       euclideanMod(this.y, other.y),
       euclideanMod(this.z, other.z))
-  };
+  }
 
   distanceTo (other) {
     var dx = other.x - this.x
     var dy = other.y - this.y
     var dz = other.z - this.z
     return Math.sqrt(dx * dx + dy * dy + dz * dz)
-  };
+  }
 
   equals (other) {
     return this.x === other.x && this.y === other.y && this.z === other.z
-  };
+  }
 
   toString () {
     return '(' + this.x + ', ' + this.y + ', ' + this.z + ')'
-  };
+  }
 
   clone () {
     return this.offset(0, 0, 0)
-  };
+  }
 
   min (other) {
     return new Vec3(Math.min(this.x, other.x), Math.min(this.y, other.y), Math.min(this.z, other.z))
-  };
+  }
 
   max (other) {
     return new Vec3(Math.max(this.x, other.x), Math.max(this.y, other.y), Math.max(this.z, other.z))
-  };
+  }
 
   norm () {
     return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z)
-  };
+  }
 
   unit () {
     var norm = this.norm()
@@ -122,44 +122,44 @@ class Vec3 {
     } else {
       return this.scaled(1 / norm)
     }
-  };
+  }
 
   scale (scalar) {
     this.x *= scalar
     this.y *= scalar
     this.z *= scalar
     return this
-  };
+  }
 
   xyDistanceTo (other) {
     var dx = other.x - this.x
     var dy = other.y - this.y
     return Math.sqrt(dx * dx + dy * dy)
-  };
+  }
 
   xzDistanceTo (other) {
     var dx = other.x - this.x
     var dz = other.z - this.z
     return Math.sqrt(dx * dx + dz * dz)
-  };
+  }
 
   yzDistanceTo (other) {
     var dy = other.y - this.y
     var dz = other.z - this.z
     return Math.sqrt(dy * dy + dz * dz)
-  };
+  }
 
   innerProduct (other) {
     return this.x * other.x + this.y * other.y + this.z * other.z
-  };
+  }
 
   manhattanDistanceTo (other) {
     return Math.abs(other.x - this.x) + Math.abs(other.y - this.y) + Math.abs(other.z - this.z)
-  };
+  }
 
   toArray () {
     return [this.x, this.y, this.z]
-  };
+  }
 }
 
 function v (x, y, z) {
