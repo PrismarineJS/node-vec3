@@ -115,13 +115,31 @@ class Vec3 {
     return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z)
   }
 
+  dot (other) {
+    return this.x * other.x + this.y * other.y + this.z * other.z
+  }
+
+  cross (other) {
+    return new Vec3(this.y * other.z - this.z * other.y, this.z * other.x - this.x * other.z, this.x * other.y - this.y * other.x)
+  }
+
   unit () {
-    var norm = this.norm()
+    const norm = this.norm()
     if (norm === 0) {
       return this.clone()
     } else {
       return this.scaled(1 / norm)
     }
+  }
+
+  normalize () {
+    const norm = this.norm()
+    if (norm !== 0) {
+      this.x /= norm
+      this.y /= norm
+      this.z /= norm
+    }
+    return this
   }
 
   scale (scalar) {
