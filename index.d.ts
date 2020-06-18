@@ -35,6 +35,8 @@ declare class Vec3 {
 
     distanceTo(other: Vec3): number;
 
+    distanceSquared(other: Vec3): number;
+
     equals(other: Vec3): boolean;
 
     toString(): string;

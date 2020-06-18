@@ -138,6 +138,15 @@ describe('vec3', function () {
     assert.strictEqual(dist1, dist2)
     assert.strictEqual(Math.round(dist1 * 100000), Math.round(expected * 100000))
   })
+  it('distanceSquared', function () {
+    var v1 = new Vec3(1, 1, 1)
+    var v2 = new Vec3(2, 2, 2)
+    var dist1 = v1.distanceSquared(v2)
+    var dist2 = v2.distanceSquared(v1)
+    var expected = 3
+    assert.strictEqual(dist1, dist2)
+    assert.strictEqual(Math.round(dist1 * 100000), Math.round(expected * 100000))
+  })
   it('equals', function () {
     var v1 = new Vec3(1, 2, 3)
     var v2 = v1.scaled(0.23424)
