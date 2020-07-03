@@ -1,4 +1,4 @@
-declare class Vec3 {
+export class Vec3 {
     constructor(x: number, y: number, z: number);
 
     x: number;
@@ -69,10 +69,4 @@ declare class Vec3 {
 
     toArray(): Array<number>;
 }
-declare function v(x: null | Array<number | string> | {x: number | string, y: number | string, z: number | string} | string, y?: number | string, z?: number | string): Vec3;
-type Vec3Constructor = typeof Vec3;
-declare namespace v {
-    const Vec3: Vec3Constructor;
-    export type Vec3 = Vec3Constructor;
-}
-export = v;
+export function v(x: null | Array<number | string> | {x: number | string, y: number | string, z: number | string} | string, y?: number | string, z?: number | string): Vec3;
