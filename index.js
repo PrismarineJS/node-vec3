@@ -91,6 +91,13 @@ class Vec3 {
     return Math.sqrt(dx * dx + dy * dy + dz * dz)
   }
 
+  distanceSquared (other) {
+    var dx = other.x - this.x
+    var dy = other.y - this.y
+    var dz = other.z - this.z
+    return dx * dx + dy * dy + dz * dz
+  }
+
   equals (other) {
     return this.x === other.x && this.y === other.y && this.z === other.z
   }
