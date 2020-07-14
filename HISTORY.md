@@ -1,3 +1,8 @@
+## 0.1.6
+
+* add distance squared (thanks @TheDudeFromCI)
+* fix typings (thanks @iczero)
+
 ## 0.1.5
 
 * normalize() : like unit() but do not create a new vector (in-place)
