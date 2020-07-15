@@ -1,4 +1,6 @@
 # vec3
+[![NPM version](https://img.shields.io/npm/v/vec3.svg)](http://npmjs.com/package/vec3)
+[![Build Status](https://github.com/PrismarineJS/node-vec3/workflows/CI/badge.svg)](https://github.com/PrismarineJS/node-vec3/actions?query=workflow%3A%22CI%22)
 
 3D vector math with robust unit tests.
 
