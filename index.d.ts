@@ -57,7 +57,7 @@ export class Vec3 {
 
     normalize(): Vec3;
 
-    scale(scalar): this;
+    scale(scalar: number): this;
 
     xyDistanceTo(other: Vec3): number;
 
