@@ -1,3 +1,6 @@
+## 0.1.7
+* fix standard not being a dev dependency
+
 ## 0.1.6
 
 * add distance squared (thanks @TheDudeFromCI)
