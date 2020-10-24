@@ -40,10 +40,10 @@ describe('v()', function () {
     assert.strictEqual(v1.x, 1)
     assert.strictEqual(v1.y, -3.5)
     assert.strictEqual(v1.z, 0)
-    var v2 = v(v(-111, 222, 9876543210.123456789).toString())
+    var v2 = v(v(-111, 222, 9876543210.12345).toString())
     assert.strictEqual(v2.x, -111)
     assert.strictEqual(v2.y, 222)
-    assert.strictEqual(v2.z, 9876543210.123456789)
+    assert.strictEqual(v2.z, 9876543210.12345)
   })
   it('invalid deserialize', function () {
     assert.throws(function () {
@@ -242,7 +242,7 @@ describe('vec3', function () {
   })
   it('norm', function () {
     var v1 = new Vec3(-10, 0, 10)
-    assert.strictEqual(Math.round(v1.norm() * 100000), Math.round(14.142135623730950 * 100000))
+    assert.strictEqual(Math.round(v1.norm() * 100000), Math.round(14.1421356237 * 100000))
   })
   it('dot', function () {
     var v1 = new Vec3(-1, -1, -1)
@@ -258,9 +258,9 @@ describe('vec3', function () {
   it('unit', function () {
     var v1 = new Vec3(10, -10, 1.1)
     var v2 = v1.unit()
-    assert.strictEqual(Math.round(v2.x * 100000), Math.round(0.7049774402016568 * 100000))
-    assert.strictEqual(Math.round(v2.y * 100000), Math.round(-0.704977440201656 * 100000))
-    assert.strictEqual(Math.round(v2.z * 100000), Math.round(0.07754751842218225 * 100000))
+    assert.strictEqual(Math.round(v2.x * 100000), Math.round(0.70497744020 * 100000))
+    assert.strictEqual(Math.round(v2.y * 100000), Math.round(-0.7049774402 * 100000))
+    assert.strictEqual(Math.round(v2.z * 100000), Math.round(0.07754751842 * 100000))
     var v3 = new Vec3(0, 0, 0)
     var v4 = v3.unit()
     assert.strictEqual(v4.x, 0)
@@ -270,9 +270,9 @@ describe('vec3', function () {
   it('normalize', function () {
     var v1 = new Vec3(10, -10, 1.1)
     var v2 = v1.normalize()
-    assert.strictEqual(Math.round(v2.x * 100000), Math.round(0.7049774402016568 * 100000))
-    assert.strictEqual(Math.round(v2.y * 100000), Math.round(-0.704977440201656 * 100000))
-    assert.strictEqual(Math.round(v2.z * 100000), Math.round(0.07754751842218225 * 100000))
+    assert.strictEqual(Math.round(v2.x * 100000), Math.round(0.70497744020 * 100000))
+    assert.strictEqual(Math.round(v2.y * 100000), Math.round(-0.7049774402 * 100000))
+    assert.strictEqual(Math.round(v2.z * 100000), Math.round(0.07754751842 * 100000))
     var v3 = new Vec3(0, 0, 0)
     var v4 = v3.normalize()
     assert.strictEqual(v4.x, 0)
@@ -291,7 +291,7 @@ describe('vec3', function () {
     var v2 = new Vec3(2, 2, 2)
     var dist1 = v1.xyDistanceTo(v2)
     var dist2 = v2.xyDistanceTo(v1)
-    var expected = 1.4142135623730950
+    var expected = 1.414213562
     assert.strictEqual(dist1, dist2)
     assert.strictEqual(Math.round(dist1 * 100000), Math.round(expected * 100000))
   })
@@ -300,7 +300,7 @@ describe('vec3', function () {
     var v2 = new Vec3(2, 2, 2)
     var dist1 = v1.xzDistanceTo(v2)
     var dist2 = v2.xzDistanceTo(v1)
-    var expected = 1.4142135623730950
+    var expected = 1.41421356237
     assert.strictEqual(dist1, dist2)
     assert.strictEqual(Math.round(dist1 * 100000), Math.round(expected * 100000))
   })
@@ -309,7 +309,7 @@ describe('vec3', function () {
     var v2 = new Vec3(2, 2, 2)
     var dist1 = v1.yzDistanceTo(v2)
     var dist2 = v2.yzDistanceTo(v1)
-    var expected = 1.4142135623730950
+    var expected = 1.41421356237
     assert.strictEqual(dist1, dist2)
     assert.strictEqual(Math.round(dist1 * 100000), Math.round(expected * 100000))
   })
