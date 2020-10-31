@@ -85,16 +85,16 @@ class Vec3 {
   }
 
   distanceTo (other) {
-    var dx = other.x - this.x
-    var dy = other.y - this.y
-    var dz = other.z - this.z
+    const dx = other.x - this.x
+    const dy = other.y - this.y
+    const dz = other.z - this.z
     return Math.sqrt(dx * dx + dy * dy + dz * dz)
   }
 
   distanceSquared (other) {
-    var dx = other.x - this.x
-    var dy = other.y - this.y
-    var dz = other.z - this.z
+    const dx = other.x - this.x
+    const dy = other.y - this.y
+    const dz = other.z - this.z
     return dx * dx + dy * dy + dz * dz
   }
 
@@ -157,20 +157,20 @@ class Vec3 {
   }
 
   xyDistanceTo (other) {
-    var dx = other.x - this.x
-    var dy = other.y - this.y
+    const dx = other.x - this.x
+    const dy = other.y - this.y
     return Math.sqrt(dx * dx + dy * dy)
   }
 
   xzDistanceTo (other) {
-    var dx = other.x - this.x
-    var dz = other.z - this.z
+    const dx = other.x - this.x
+    const dz = other.z - this.z
     return Math.sqrt(dx * dx + dz * dz)
   }
 
   yzDistanceTo (other) {
-    var dy = other.y - this.y
-    var dz = other.z - this.z
+    const dy = other.y - this.y
+    const dz = other.z - this.z
     return Math.sqrt(dy * dy + dz * dz)
   }
 
@@ -195,7 +195,7 @@ function v (x, y, z) {
   } else if (typeof x === 'object') {
     return new Vec3(parseFloat(x.x, 10), parseFloat(x.y, 10), parseFloat(x.z, 10))
   } else if (typeof x === 'string' && y == null) {
-    var match = x.match(re)
+    const match = x.match(re)
     if (match) {
       return new Vec3(
         parseFloat(match[1], 10),
@@ -210,7 +210,7 @@ function v (x, y, z) {
 }
 
 function euclideanMod (numerator, denominator) {
-  var result = numerator % denominator
+  const result = numerator % denominator
   return result < 0 ? result + denominator : result
 }
 
