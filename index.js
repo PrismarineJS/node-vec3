@@ -57,6 +57,20 @@ class Vec3 {
     return this
   }
 
+  multiply (other) {
+    this.x *= other.x
+    this.y *= other.y
+    this.z *= other.z
+    return this
+  }
+
+  divide (other) {
+    this.x /= other.x
+    this.y /= other.y
+    this.z /= other.z
+    return this
+  }
+
   plus (other) {
     return this.offset(other.x, other.y, other.z)
   }

@@ -21,6 +21,10 @@ export class Vec3 {
 
     subtract(other: Vec3): this;
 
+    multiply(other: Vec3): this;
+
+    divide(other: Vec3): this;
+
     plus(other: Vec3): Vec3;
 
     minus(other: Vec3): Vec3;
