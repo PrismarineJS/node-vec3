@@ -198,7 +198,7 @@ describe('vec3', function () {
   it('divide', function () {
     const v1 = new Vec3(10, 20, 30)
     const v2 = new Vec3(2, 5, 3)
-    const v3 = v1.subtract(v2)
+    const v3 = v1.divide(v2)
     assert.strictEqual(v3, v1)
     assert.strictEqual(v1.x, 5)
     assert.strictEqual(v1.y, 4)
