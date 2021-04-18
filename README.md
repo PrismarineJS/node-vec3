@@ -53,6 +53,8 @@ v()
     ✓ clone
     ✓ add
     ✓ subtract
+    ✓ multiply
+    ✓ divide
     ✓ set
     ✓ modulus
     ✓ volume
