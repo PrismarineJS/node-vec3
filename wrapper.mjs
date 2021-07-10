@@ -1,4 +1,4 @@
-import mod from "./index.js";
+import mod from './index.js'
 
-export default mod;
-export const Vec3 = mod.Vec3;
+export default mod
+export const Vec3 = mod.Vec3
