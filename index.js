@@ -21,6 +21,17 @@ class Vec3 {
     return this
   }
 
+  rounded () {
+    return new Vec3(Math.round(this.x), Math.round(this.y), Math.round(this.z))
+  }
+
+  round () {
+    this.x = Math.round(this.x)
+    this.y = Math.round(this.y)
+    this.z = Math.round(this.z)
+    return this
+  }
+
   floored () {
     return new Vec3(Math.floor(this.x), Math.floor(this.y), Math.floor(this.z))
   }

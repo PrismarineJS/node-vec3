@@ -52,6 +52,22 @@ describe('v()', function () {
   })
 })
 describe('vec3', function () {
+  it('rounded', function () {
+    const v1 = new Vec3(1.1, -1.5, 1.9)
+    const v2 = v1.rounded()
+    v1.x = 10
+    assert.strictEqual(v2.x, 1)
+    assert.strictEqual(v2.y, -1)
+    assert.strictEqual(v2.z, 2)
+  })
+  it('round', function () {
+    const v1 = new Vec3(1.1, -1.5, 1.9)
+    const v2 = v1.round()
+    assert.strictEqual(v2, v1)
+    assert.strictEqual(v1.x, 1)
+    assert.strictEqual(v1.y, -1)
+    assert.strictEqual(v1.z, 2)
+  })
   it('floored', function () {
     const v1 = new Vec3(1.1, -1.5, 1.9)
     const v2 = v1.floored()

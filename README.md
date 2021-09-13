@@ -39,6 +39,8 @@ v()
     ✓ invalid deserialize
 
   vec3
+    ✓ rounded
+    ✓ round
     ✓ floored
     ✓ floor
     ✓ offset
