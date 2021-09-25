@@ -5,7 +5,9 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "npm run test-js && npm run test-types",
+    "test-js": "mocha --reporter spec",
+    "test-types": "tsd",
     "pretest": "npm run lint",
     "lint": "standard",
     "fix": "standard --fix"
@@ -21,7 +23,11 @@
   "license": "BSD",
   "devDependencies": {
     "mocha": "^9.0.0",
-    "standard": "^16.0.1"
+    "standard": "^16.0.1",
+    "tsd": "^0.17.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "tsd": {
+    "directory": "test"
+  }
 }

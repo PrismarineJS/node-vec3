@@ -1,87 +1,94 @@
 export class Vec3 {
-    constructor(x: number, y: number, z: number);
+  constructor(x: number, y: number, z: number);
 
-    x: number;
-    y: number;
-    z: number;
+  x: number;
+  y: number;
+  z: number;
 
-    set(x: number, y: number, z: number): this;
+  set(x: number, y: number, z: number): this;
 
-    update(other: Vec3): this;
+  update(other: Vec3): this;
 
-    rounded(): Vec3;
-    
-    round(): this;
+  rounded(): Vec3;
 
-    floored(): Vec3;
+  round(): this;
 
-    floor(): this;
+  floored(): Vec3;
 
-    offset(dx: number, dy: number, dz: number): Vec3;
+  floor(): this;
 
-    translate(dx: number, dy: number, dz: number): this;
+  offset(dx: number, dy: number, dz: number): Vec3;
 
-    add(other: Vec3): this;
+  translate(dx: number, dy: number, dz: number): this;
 
-    subtract(other: Vec3): this;
+  add(other: Vec3): this;
 
-    multiply(other: Vec3): this;
+  subtract(other: Vec3): this;
 
-    divide(other: Vec3): this;
+  multiply(other: Vec3): this;
 
-    plus(other: Vec3): Vec3;
+  divide(other: Vec3): this;
 
-    minus(other: Vec3): Vec3;
+  plus(other: Vec3): Vec3;
 
-    scaled(scalar: number): Vec3;
+  minus(other: Vec3): Vec3;
 
-    abs(): Vec3;
+  scaled(scalar: number): Vec3;
 
-    volume(): number;
+  abs(): Vec3;
 
-    modulus(other: Vec3): Vec3;
+  volume(): number;
 
-    distanceTo(other: Vec3): number;
+  modulus(other: Vec3): Vec3;
 
-    distanceSquared(other: Vec3): number;
+  distanceTo(other: Vec3): number;
 
-    equals(other: Vec3): boolean;
+  distanceSquared(other: Vec3): number;
 
-    toString(): string;
+  equals(other: Vec3): boolean;
 
-    clone(): Vec3;
+  toString(): string;
 
-    min(other: Vec3): Vec3;
+  clone(): Vec3;
 
-    max(other: Vec3): Vec3;
+  min(other: Vec3): Vec3;
 
-    dot(other: Vec3): number;
+  max(other: Vec3): Vec3;
 
-    cross(other: Vec3): Vec3;
+  dot(other: Vec3): number;
 
-    norm(): number;
+  cross(other: Vec3): Vec3;
 
-    unit(): Vec3;
+  norm(): number;
 
-    normalize(): Vec3;
+  unit(): Vec3;
 
-    scale(scalar: number): this;
+  normalize(): Vec3;
 
-    xyDistanceTo(other: Vec3): number;
+  scale(scalar: number): this;
 
-    xzDistanceTo(other: Vec3): number;
+  xyDistanceTo(other: Vec3): number;
 
-    yzDistanceTo(other: Vec3): number;
+  xzDistanceTo(other: Vec3): number;
 
-    innerProduct(other: Vec3): number;
+  yzDistanceTo(other: Vec3): number;
 
-    manhattanDistanceTo(other: Vec3): number;
+  innerProduct(other: Vec3): number;
 
-    toArray(): Array<number>;
+  manhattanDistanceTo(other: Vec3): number;
+
+  toArray(): [number, number, number];
 }
 
 export default function v(
-    x: null | Array<number | string> | {x: number | string, y: number | string, z: number | string} | string,
-    y?: number | string,
-    z?: number | string
+  coordinates:
+    | null
+    | string
+    | [number | string, number | string, number | string]
+    | { x: number | string; y: number | string; z: number | string }
+): Vec3;
+export default function v(
+  x: number | string,
+  y: number | string,
+  z: number | string
 ): Vec3;
