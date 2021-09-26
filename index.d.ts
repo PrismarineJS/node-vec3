@@ -9,6 +9,10 @@ export class Vec3 {
 
   update(other: Vec3): this;
 
+  rounded(): Vec3;
+
+  round(): this;
+
   floored(): Vec3;
 
   floor(): this;
