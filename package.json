@@ -29,5 +29,9 @@
   "dependencies": {},
   "tsd": {
     "directory": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PrismarineJS/node-vec3.git"
   }
 }
