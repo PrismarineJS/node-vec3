@@ -23,7 +23,7 @@
   "license": "BSD",
   "devDependencies": {
     "mocha": "^9.0.0",
-    "standard": "^16.0.1",
+    "standard": "^17.0.0",
     "tsd": "^0.19.0"
   },
   "dependencies": {},
