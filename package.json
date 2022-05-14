@@ -24,7 +24,7 @@
   "devDependencies": {
     "mocha": "^10.0.0",
     "standard": "^17.0.0",
-    "tsd": "^0.19.0"
+    "tsd": "^0.20.0"
   },
   "dependencies": {},
   "tsd": {
