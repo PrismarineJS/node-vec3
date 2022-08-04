@@ -216,21 +216,21 @@ function v (x, y, z) {
   if (x == null) {
     return new Vec3(0, 0, 0)
   } else if (Array.isArray(x)) {
-    return new Vec3(parseFloat(x[0], 10), parseFloat(x[1], 10), parseFloat(x[2], 10))
+    return new Vec3(parseFloat(x[0]), parseFloat(x[1]), parseFloat(x[2]))
   } else if (typeof x === 'object') {
-    return new Vec3(parseFloat(x.x, 10), parseFloat(x.y, 10), parseFloat(x.z, 10))
+    return new Vec3(parseFloat(x.x), parseFloat(x.y), parseFloat(x.z))
   } else if (typeof x === 'string' && y == null) {
     const match = x.match(re)
     if (match) {
       return new Vec3(
-        parseFloat(match[1], 10),
-        parseFloat(match[2], 10),
-        parseFloat(match[3], 10))
+        parseFloat(match[1]),
+        parseFloat(match[2]),
+        parseFloat(match[3]))
     } else {
       throw new Error('vec3: cannot parse: ' + x)
     }
   } else {
-    return new Vec3(parseFloat(x, 10), parseFloat(y, 10), parseFloat(z, 10))
+    return new Vec3(parseFloat(x), parseFloat(y), parseFloat(z))
   }
 }
 
