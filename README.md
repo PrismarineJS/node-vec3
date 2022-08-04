@@ -84,4 +84,4 @@ More functions welcome in the form of pull requests.
 
 ## History
 
-See [History](History.md)
+See [History](HISTORY.md)
