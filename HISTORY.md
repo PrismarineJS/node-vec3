@@ -1,3 +1,8 @@
+## 0.1.8
+
+* fix some typescript stuff
+* new methods: rounded, round, multiply, and divide
+
 ## 0.1.7
 * fix standard not being a dev dependency
 
