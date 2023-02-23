@@ -15,10 +15,6 @@
   "keywords": [
     "point"
   ],
-  "exports": {
-    "require": "./index.js",
-    "import": "./wrapper.mjs"
-  },
   "author": "Andrew Kelley",
   "license": "BSD",
   "devDependencies": {
