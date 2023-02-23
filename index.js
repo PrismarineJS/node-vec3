@@ -240,4 +240,4 @@ function euclideanMod (numerator, denominator) {
 }
 
 module.exports = v
-v.Vec3 = Vec3
+module.exports.Vec3 = Vec3
