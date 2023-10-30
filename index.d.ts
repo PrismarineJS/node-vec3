@@ -6,9 +6,40 @@ export class Vec3 {
   z: number;
 
   /**
-   * Set own values to given x y z
+   * Returns true when it is a zero vector.
    */
-  set(x: number, y: number, z: number): this;
+  isZero(): boolean;
+
+  /**
+   * Access component by index
+   */
+  at(id: number): number;
+
+  /**
+   * Returns an array component x, z
+   */
+  xz(): [number, number];
+
+  /**
+   * Returns an array component x, y
+   */
+  xy(): [number, number];
+
+  /**
+   * Returns an array component y, z
+   */
+  yz(): [number, number];
+
+  /**
+   * Returns a vector with swapped y and z
+   */
+  xzy(): Vec3;
+
+  /**
+   * Set own values to given x y z
+   * If some components is given null, then those components won't change
+   */
+  set(x: number | null, y: number | null, z: number | null): this;
 
   /**
    * Set own values to values given by other
@@ -106,9 +137,10 @@ export class Vec3 {
   distanceSquared(other: Vec3): number;
 
   /**
-   * Returns true when all values match with the values off the other vector
+   * Check whether two vectors are equal
+   * Returns true if each components have at most `error` difference
    */
-  equals(other: Vec3): boolean;
+  equals(other: Vec3, error?: number): boolean;
 
   /**
    * Converts own values to a string representation in the format `(x, y, z)`

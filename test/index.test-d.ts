@@ -17,6 +17,12 @@ expectType<number>(vec.x);
 expectType<number>(vec.y);
 expectType<number>(vec.z);
 
+expectType<boolean>(vec.isZero());
+expectType<number>(vec.at(1));
+expectType<[number, number]>(vec.xz());
+expectType<[number, number]>(vec.xy());
+expectType<[number, number]>(vec.yz());
+expectType<Vec3>(vec.xzy());
 expectType<Vec3>(vec.set(4, 5, 6));
 expectType<Vec3>(vec.update(vec));
 expectType<Vec3>(vec.floored());
