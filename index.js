@@ -32,9 +32,9 @@ class Vec3 {
   }
 
   set (x, y, z) {
-    if (x != null) { this.x = x }
-    if (y != null) { this.y = y }
-    if (z != null) { this.z = z }
+    this.x = x
+    this.y = y
+    this.z = z
     return this
   }
 

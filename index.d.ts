@@ -39,7 +39,7 @@ export class Vec3 {
    * Set own values to given x y z
    * If some components is given null, then those components won't change
    */
-  set(x: number | null, y: number | null, z: number | null): this;
+  set(x: number, y: number, z: number): this;
 
   /**
    * Set own values to values given by other

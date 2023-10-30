@@ -268,10 +268,6 @@ describe('vec3', function () {
     assert.strictEqual(v1.x, 0)
     assert.strictEqual(v1.y, 10)
     assert.strictEqual(v1.z, 100)
-    v1.set(10, 0, null)
-    assert.strictEqual(v1.x, 10)
-    assert.strictEqual(v1.y, 0)
-    assert.strictEqual(v1.z, 100)
   })
   it('modulus', function () {
     const v1 = new Vec3(12, 32, -1)
