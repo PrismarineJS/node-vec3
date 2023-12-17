@@ -147,7 +147,7 @@ class Vec3 {
     return dx * dx + dy * dy + dz * dz
   }
 
-  equals (other, error = Number.EPSILON) {
+  equals (other, error = 0) {
     return Math.abs(this.x - other.x) <= error &&
       Math.abs(this.y - other.y) <= error &&
       Math.abs(this.z - other.z) <= error

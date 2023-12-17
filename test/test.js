@@ -208,7 +208,7 @@ describe('vec3', function () {
     const v4 = new Vec3(0.1, 0, 0)
     const v5 = new Vec3(0.2, 0, 0)
     const v6 = new Vec3(0.3, 0, 0)
-    assert.ok(v4.plus(v5).equals(v6))
+    assert.ok(v4.plus(v5).equals(v6, Number.EPSILON))
   })
   it('toString', function () {
     const v1 = new Vec3(1, -1, 3.14)
