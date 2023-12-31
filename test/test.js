@@ -52,6 +52,43 @@ describe('v()', function () {
   })
 })
 describe('vec3', function () {
+  it('isZero', function () {
+    const v1 = new Vec3(0, 1, 2)
+    const v2 = new Vec3(0, 0, 0)
+    assert.ok(!v1.isZero())
+    assert.ok(v2.isZero())
+  })
+  it('at', function () {
+    const v1 = new Vec3(0, 1, 2)
+    assert.strictEqual(v1.at(0), 0)
+    assert.strictEqual(v1.at(1), 1)
+    assert.strictEqual(v1.at(2), 2)
+  })
+  it('xz', function () {
+    const v1 = new Vec3(0, 1, 2)
+    const a = v1.xz()
+    assert.strictEqual(a[0], 0)
+    assert.strictEqual(a[1], 2)
+  })
+  it('xy', function () {
+    const v1 = new Vec3(0, 1, 2)
+    const a = v1.xy()
+    assert.strictEqual(a[0], 0)
+    assert.strictEqual(a[1], 1)
+  })
+  it('yz', function () {
+    const v1 = new Vec3(0, 1, 2)
+    const a = v1.yz()
+    assert.strictEqual(a[0], 1)
+    assert.strictEqual(a[1], 2)
+  })
+  it('xzy', function () {
+    const v1 = new Vec3(0, 1, 2)
+    const v2 = v1.xzy()
+    assert.strictEqual(v2.x, 0)
+    assert.strictEqual(v2.y, 2)
+    assert.strictEqual(v2.z, 1)
+  })
   it('rounded', function () {
     const v1 = new Vec3(1.1, -1.5, 1.9)
     const v2 = v1.rounded()
@@ -168,6 +205,10 @@ describe('vec3', function () {
     const v2 = v1.scaled(0.23424)
     const v3 = v1.scaled(0.23424)
     assert.ok(v2.equals(v3))
+    const v4 = new Vec3(0.1, 0, 0)
+    const v5 = new Vec3(0.2, 0, 0)
+    const v6 = new Vec3(0.3, 0, 0)
+    assert.ok(v4.plus(v5).equals(v6, Number.EPSILON))
   })
   it('toString', function () {
     const v1 = new Vec3(1, -1, 3.14)

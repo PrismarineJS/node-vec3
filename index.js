@@ -7,6 +7,30 @@ class Vec3 {
     this.z = z
   }
 
+  isZero () {
+    return this.x === 0 && this.y === 0 && this.z === 0
+  }
+
+  at (id) {
+    return this.toArray()[id]
+  }
+
+  xz () {
+    return [this.x, this.z]
+  }
+
+  xy () {
+    return [this.x, this.y]
+  }
+
+  yz () {
+    return [this.y, this.z]
+  }
+
+  xzy () {
+    return new Vec3(this.x, this.z, this.y)
+  }
+
   set (x, y, z) {
     this.x = x
     this.y = y
@@ -123,8 +147,10 @@ class Vec3 {
     return dx * dx + dy * dy + dz * dz
   }
 
-  equals (other) {
-    return this.x === other.x && this.y === other.y && this.z === other.z
+  equals (other, error = 0) {
+    return Math.abs(this.x - other.x) <= error &&
+      Math.abs(this.y - other.y) <= error &&
+      Math.abs(this.z - other.z) <= error
   }
 
   toString () {
