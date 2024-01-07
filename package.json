@@ -16,6 +16,7 @@
     "point"
   ],
   "exports": {
+    "types": "./index.d.ts",
     "require": "./index.js",
     "import": "./wrapper.mjs"
   },
