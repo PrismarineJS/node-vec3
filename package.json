@@ -1,6 +1,6 @@
 {
   "name": "vec3",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "3d vector math with good unit tests",
   "main": "index.js",
   "types": "index.d.ts",
