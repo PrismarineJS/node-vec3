@@ -8,7 +8,7 @@
 ## Usage
 
 ```js
-import { v, Vec3 } from '../src/mod.js'
+import { v, Vec3 } from 'vec3'
 
 const v1 = v(1, 2, 3);
 console.log(v1); // prints "(1, 2, 3)"
@@ -21,7 +21,7 @@ const v3 = new Vec3(0, 1, 2);
 Or _if you prefer_ CommonJS:
 
 ```js
-const v = require('../src/mod.cjs')
+const v = require('vec3')
 const Vec3 = v.Vec3
 // etc...
 ```
