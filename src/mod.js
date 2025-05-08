@@ -265,5 +265,5 @@ function euclideanMod (numerator, denominator) {
   return result < 0 ? result + denominator : result
 }
 
-module.exports = v
-v.Vec3 = Vec3
+export { Vec3, v }
+export default v
