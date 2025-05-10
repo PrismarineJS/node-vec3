@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import assert from 'node:assert'
-import { v, Vec3 } from '../src/mod.js'
+import { v, Vec3 } from '../index.js'
 
 describe('v() esm', function () {
   it('no args', function () {

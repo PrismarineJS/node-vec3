@@ -1,5 +1,5 @@
 import { expectType } from "tsd";
-import vec3, { Vec3 } from "../src/mod.js";
+import vec3, { Vec3 } from "../index";
 
 const vec = vec3([1, 2, 3]);
 expectType<Vec3>(vec);

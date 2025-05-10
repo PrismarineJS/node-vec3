@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 const assert = require('node:assert')
-const v = require('../src/mod.cjs')
+const v = require('../wrapper.cjs')
 const Vec3 = v.Vec3
 
 describe('v() cjs', function () {
