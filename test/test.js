@@ -1,10 +1,9 @@
 /* eslint-env mocha */
 
-const v = require('../')
-const Vec3 = v.Vec3
-const assert = require('assert')
+import assert from 'node:assert'
+import { v, Vec3 } from '../index.js'
 
-describe('v()', function () {
+describe('v() esm', function () {
   it('no args', function () {
     const v1 = v()
     assert.strictEqual(v1.x, 0)
@@ -51,7 +50,8 @@ describe('v()', function () {
     }, /cannot parse/)
   })
 })
-describe('vec3', function () {
+
+describe('vec3 esm', function () {
   it('isZero', function () {
     const v1 = new Vec3(0, 1, 2)
     const v2 = new Vec3(0, 0, 0)

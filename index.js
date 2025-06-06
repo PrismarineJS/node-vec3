@@ -265,5 +265,7 @@ function euclideanMod (numerator, denominator) {
   return result < 0 ? result + denominator : result
 }
 
-module.exports = v
 v.Vec3 = Vec3
+export default v // So that import v from 'vec3' works.
+export { v as 'module.exports' } // So that const v = require('vec3') works.
+export { Vec3, v } // So that import { Vec3, v } from 'vec3' and const { Vec3, v } = require('vec3') work.

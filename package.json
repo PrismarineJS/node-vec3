@@ -1,9 +1,10 @@
 {
   "name": "vec3",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "3d vector math with good unit tests",
   "main": "index.js",
   "types": "index.d.ts",
+  "type": "module",
   "scripts": {
     "test": "npm run test-js && npm run test-types",
     "test-js": "mocha --reporter spec",
@@ -15,11 +16,6 @@
   "keywords": [
     "point"
   ],
-  "exports": {
-    "types": "./index.d.ts",
-    "require": "./index.js",
-    "import": "./wrapper.mjs"
-  },
   "author": "Andrew Kelley",
   "license": "BSD",
   "devDependencies": {
@@ -27,7 +23,6 @@
     "standard": "^17.0.0",
     "tsd": "^0.25.0"
   },
-  "dependencies": {},
   "tsd": {
     "directory": "test"
   },
