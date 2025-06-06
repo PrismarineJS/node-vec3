@@ -16,9 +16,6 @@
   "keywords": [
     "point"
   ],
-  "exports": {
-    "require": "./wrapper.cjs"
-  },
   "author": "Andrew Kelley",
   "license": "BSD",
   "devDependencies": {
