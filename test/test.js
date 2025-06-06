@@ -1,8 +1,7 @@
-/* eslint-env mocha */
-
+const assert = require('node:assert')
+const { describe, it } = require('node:test')
 const v = require('../')
 const Vec3 = v.Vec3
-const assert = require('assert')
 
 describe('v()', function () {
   it('no args', function () {

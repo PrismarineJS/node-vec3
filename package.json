@@ -6,7 +6,7 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "npm run test-js && npm run test-types",
-    "test-js": "mocha --reporter spec",
+    "test-js": "node --experimental-test-coverage --test",
     "test-types": "tsd",
     "pretest": "npm run lint",
     "lint": "standard",
@@ -23,7 +23,6 @@
   "author": "Andrew Kelley",
   "license": "BSD",
   "devDependencies": {
-    "mocha": "^11.0.1",
     "standard": "^17.0.0",
     "tsd": "^0.25.0"
   },
