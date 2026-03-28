@@ -182,6 +182,24 @@ describe('vec3', function () {
     assert.strictEqual(v2.y, 1.5)
     assert.strictEqual(v2.z, 1.9)
   })
+  it('angleTo', function () {
+    const v1 = new Vec3(1, 1, 1)
+    const v2 = new Vec3(1, 0, 0)
+    const angle1 = v1.angleTo(v2)
+    const angle2 = v2.angleTo(v1)
+    const expected = 0.9553166181
+    assert.strictEqual(angle1, angle2)
+    assert.strictEqual(Math.round(angle1 * 100000), Math.round(expected * 100000))
+  })
+  it('angleToNullVectors', function () {
+    const v1 = new Vec3(0, 0, 0)
+    const v2 = new Vec3(0, 0, 0)
+    const angle1 = v1.angleTo(v2)
+    const angle2 = v2.angleTo(v1)
+    const expected = NaN
+    assert.strictEqual(angle1, angle2)
+    assert.strictEqual(Math.round(angle1 * 100000), Math.round(expected * 100000))
+  })
   it('distanceTo', function () {
     const v1 = new Vec3(1, 1, 1)
     const v2 = new Vec3(2, 2, 2)

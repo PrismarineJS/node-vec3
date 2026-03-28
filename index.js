@@ -133,6 +133,10 @@ class Vec3 {
       euclideanMod(this.z, other.z))
   }
 
+  angleTo (other) {
+    return Math.acos(this.dot(other) / (this.norm() * other.norm()))
+  }
+
   distanceTo (other) {
     const dx = other.x - this.x
     const dy = other.y - this.y

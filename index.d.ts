@@ -127,6 +127,11 @@ export class Vec3 {
   modulus(other: Vec3): Vec3;
 
   /**
+   *  Return the angle in rad between another vector and this one
+   */
+  angleTo(other: Vec3): number;
+
+  /**
    * Return the euclidean distance to another vector 
    */
   distanceTo(other: Vec3): number;

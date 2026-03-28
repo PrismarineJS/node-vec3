@@ -1,4 +1,5 @@
 # vec3
+
 [![NPM version](https://img.shields.io/npm/v/vec3.svg)](http://npmjs.com/package/vec3)
 [![Build Status](https://github.com/PrismarineJS/node-vec3/workflows/CI/badge.svg)](https://github.com/PrismarineJS/node-vec3/actions?query=workflow%3A%22CI%22)
 
@@ -7,7 +8,7 @@
 ## Usage
 
 ```js
-var v = require('vec3');
+var v = require("vec3");
 
 var v1 = v(1, 2, 3);
 console.log(v1); // prints "(1, 2, 3)"
@@ -18,7 +19,7 @@ console.log(v2); // prints "(1, 2, 4)"
 Or:
 
 ```js
-var Vec3 = require('vec3').Vec3;
+var Vec3 = require("vec3").Vec3;
 
 var v1 = new Vec3(1, 2, 3);
 // etc...
@@ -55,6 +56,7 @@ More available functions are listed below in Test Coverage.
     ✔ minus
     ✔ scaled
     ✔ abs
+    ✔ angleTo
     ✔ distanceTo
     ✔ distanceSquared
     ✔ equals

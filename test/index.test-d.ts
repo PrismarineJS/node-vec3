@@ -39,6 +39,7 @@ expectType<Vec3>(vec.scaled(2));
 expectType<Vec3>(vec.abs());
 expectType<number>(vec.volume());
 expectType<Vec3>(vec.modulus(vec));
+expectType<number>(vec.angleTo(vec));
 expectType<number>(vec.distanceTo(vec));
 expectType<number>(vec.distanceSquared(vec));
 expectType<boolean>(vec.equals(vec));
