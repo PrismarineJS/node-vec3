@@ -1,3 +1,11 @@
+## 0.2.0
+* [Update CI to Node 24 (#58)](https://github.com/PrismarineJS/node-vec3/commit/b3c068d8eafa614b779074087fd2a387fac29256) (thanks @rom1504)
+* [Add angleTo (#54)](https://github.com/PrismarineJS/node-vec3/commit/3a84c18eca955391975969a8484fffcd5e751d60) (thanks @eevleevs)
+* [Fix publish condition for npm-publish v4 (#57)](https://github.com/PrismarineJS/node-vec3/commit/22ac569ec9c47347bfce588bcb7faddaf830ff4f) (thanks @rom1504)
+* [Switch to trusted publishing via OIDC (#56)](https://github.com/PrismarineJS/node-vec3/commit/1cea1c152bd5ee354b83bc3e97905c0d36044d7b) (thanks @rom1504)
+* [node 22 (#52)](https://github.com/PrismarineJS/node-vec3/commit/7c362a39de77c35677c9c98ed4cb56fd3cef124a) (thanks @rom1504)
+* [Bump mocha from 10.8.2 to 11.0.1 (#51)](https://github.com/PrismarineJS/node-vec3/commit/3b2bf2a14dc6458f0b84bed6c96b911f44451b14) (thanks @dependabot[bot])
+
 ## 0.1.10
 * [add new types export (#49)](https://github.com/PrismarineJS/node-vec3/commit/9a3c259a361de7b6053c5e60ac70ba8ce658aeb0) (thanks @zerozeynep)
 
